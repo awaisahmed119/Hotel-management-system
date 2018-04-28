@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'addroom')}">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD new room</title>
+</head>
+<body>
+<form  id="lform" th:action="@{/submitroom}" th:object="${room}" method="post"  >
+<div>
+    <label >Room ID</label>
+    <br>
+
+
+
+    <input  id="id" type="text" name="id" th:value="${room.id}" />
+    <br>
+    <br>
+    <label >Room Category</label> &emsp; &emsp;
+    &emsp; &emsp;&emsp; &emsp;&emsp;
+    <br>
+    <input id="category" type="text" name="category" th:value="${room.category}"/>&emsp; &emsp;
+    <br>
+    <br>
+    <label >Specification</label>
+    <br>
+    <input id="specs" type="text" name="specs" th:value="${room.specs}"/>
+    <br>
+    <br>
+    <label >Features Details</label> &emsp;
+    <br>
+    <input id="features" type="text" name="features" th:value="${room.features}"/>
+    <br>
+    <br>
+    <label >Price</label> &emsp;
+    <br>
+    <input id="price" type="text" name="price" th:value="${room.price}"/>
+
+</div>
+<button type="submit" class="btn btn-primary navbar-btn">Submit Room Details</button>
+
+</form>
+</body>
+</html>

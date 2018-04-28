@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'userdetails')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage users</title>
+</head>
+<body>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th class="warning">UserName</th>
+        <th>Email</th>
+        <th>Delete User</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="record : ${users}">
+        <td th:text="${record.username}"> </td>
+        <td th:text="${record.email}"> </td>
+        <td>
+            <form  id="form2" th:action="@{/deleteuser}" method="post"  >
+                <button type="submit" id="updtbutton" class="btn btn-danger" th:value="${record.username}" name="delbutton">Delete</button>
+            </form>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+
+
+</body>
+</html>

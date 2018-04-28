@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'uhome')}">
+
+
+
+<head>
+
+    <title>Hotel Booking System</title>
+</head>
+<body>
+<label>Rating: </label>
+<p th:text="${rating}"/>
+</div>
+
+<div class="container">
+    <h1>ROOMS INFORMATION</h1>
+</div>
+
+
+
+
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th class="warning">Room ID#</th>
+        <th>Category </th>
+        <th>Specification</th>
+        <th>Features</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Book Room</th>
+        <th>Pics</th>
+    </tr>
+
+    </thead>
+    <tbody>
+
+    <tr th:each="record : ${rooms}">
+        <td th:text="${record.id}"> </td>
+        <td th:text="${record.category}"> </td>
+        <td th:text="${record.specs}"> </td>
+        <td th:text="${record.features}"> </td>
+        <td th:text="${record.price}"> </td>
+        <td th:text="${record.status}"> </td>
+        <td>
+            <form  id="form" th:action="@{/bookroom}" method="post" >
+                <button type="submit" id="delbutton" class="btn btn-danger" th:value="${record.id}" name="bookbutton"> Book Room </button>
+            </form>
+        </td>
+        <td>
+            <form  id="form3" th:action="@{/showpics}" >
+                <button type="submit" id="showpics" class="btn btn-primary navbar-btn" th:value="${record.id}" name="showpics">pics</button>
+            </form>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+<form action="/review">
+    <button  type=submit class="btn btn-success" > Give a Review </button>
+</form>
+
+<form action="/review">
+    <button  type=submit class="btn btn-success" > Give a Review </button>
+</form>
+
+<form action="/rate" method="post">
+    <input type="text" name="rating"  pattern="[0-5]" />
+    <button  type=submit class="btn btn-primary" > Rate Us </button>
+</form>
+</body>
+</html>

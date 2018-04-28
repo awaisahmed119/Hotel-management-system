@@ -1,0 +1,111 @@
+<!doctype html>
+<html th:fragment="layout (template, menu)" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Hero-Technology.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Header.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="assets/css/Hero-Technology-1.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Login-Form.css">
+    <link rel="stylesheet" href="assets/css/Contact-FormModal-Contact-Form-with-Google-Map.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
+    <link rel="stylesheet" href="assets/css/MUSA_panel-table.css">
+    <link rel="stylesheet" href="assets/css/MUSA_panel-table1.css">
+    <link rel="stylesheet" href="assets/css/select21.css">
+
+
+
+
+    <title>Java Getting Started on Heroku</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand navbar-link" href="/home">Hotel Management System</a>
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+
+
+
+
+
+
+
+    <!--   <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary navbar-btn" role="button" type="submist" href="admin.jsp">Manage Flights </a><a class="btn btn-success navbar-btn" role="button" href="manager.jsp" style="margin-left:0.7%;">Show Requests</a>-->
+
+    <ul class="nav navbar-nav navbar-right">
+        <li role="presentation"><a href="https://en.wikipedia.org/wiki/Hotels">About us</a></li>
+    </ul></div>
+    <a href="/logout"><span class="glyphicon glyphicon-user"></span> Logout</a>
+
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+<!--
+
+   <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+       <div class="container">
+           <ul class="nav navbar-nav">
+               <li class="active">
+                   <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+               </li>
+               <li>
+                   <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
+               </li>
+               <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Getting Started Guides <span class="caret"></span></a>
+                   <ul class="dropdown-menu" role="menu">
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started with Ruby on Heroku</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started with PHP on Heroku</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started with Java on Heroku</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-go">Getting Started with Go on Heroku</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-clojure">Getting Started with Clojure on Heroku</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-scala">Getting Started with Scala on Heroku</a></li>
+                       <li class="divider"></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-heroku-and-connect-without-local-dev">Getting Started on Heroku with Heroku Connect</a></li>
+                       <li><a href="https://devcenter.heroku.com/articles/getting-started-with-jruby">Getting Started with Ruby on Heroku (Microsoft Windows)</a></li>
+                   </ul>
+               </li>
+           </ul>
+           <ul class="nav navbar-nav navbar-right">
+               <li class="navbar-right">
+                   <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
+               </li>
+           </ul>
+       </div>
+   </nav>
+-->
+   <div th:replace="${template}"/>
+
+   <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+   <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+   <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+
+</body>

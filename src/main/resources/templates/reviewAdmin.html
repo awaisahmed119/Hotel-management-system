@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'revies')}">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>reviews</title>
+</head>
+<body>
+
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th class="warning">User</th>
+        <th>Review</th>
+        <th>Description</th>
+        <th>Delete Review</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="record : ${reviews}">
+        <td th:text="${record.user}"> </td>
+        <td th:text="${record.review}"> </td>
+        <td th:text="${record.description}"> </td>
+        <td>
+            <form  id="form2" th:action="@{/deletereview}" method="post"  >
+                <button type="submit" id="updtbutton" class="btn btn-danger" th:value="${record.user}" name="delbutton">Delete</button>
+            </form>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+</body>
+</html>

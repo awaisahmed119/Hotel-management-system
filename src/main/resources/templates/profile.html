@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'profile')}">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+</head>
+<body>
+
+<form  id="lform" th:action="@{/submitprofile}" th:object="${profile}" method="post"  >
+    <div>
+        <img th:src="${picurl}"/>
+        <br>
+       <h1 th:text="${profile.username}"/>
+        <br>
+        <label>Address</label>
+        <br>
+        <input  id="id" type="text" name="address" th:value="${profile.address}" />
+        <br>
+        <br>
+        <label >Phone#</label> &emsp; &emsp;
+        &emsp; &emsp;&emsp; &emsp;&emsp;
+        <br>
+        <input id="category" type="text" name="cellno" th:value="${profile.cellno}"/>&emsp; &emsp;
+        <br>
+        <br>
+        <label >cnic</label>
+        <br>
+        <input id="specs" type="text" name="cnic" th:value="${profile.cnic}"/>
+        <br>
+        <button type="submit" Value="Update"  class="btn btn-primary navbar-btn" >Update Profile</button>
+        <br>
+        </div>
+       </form>
+
+
+<br>
+
+<form action="/submitprofilepic" method="post" enctype="multipart/form-data">
+
+        <br>
+        <br>
+        Picture to upload
+            <input type="file"  name="file"/>
+          <br>
+          <br>
+        <button type="submit" Value="Update"  class="btn btn-primary navbar-btn" >Upload Picture</button>
+
+</form>
+
+
+<form action="/removeprofilepic" method="post">
+    <button type="submit" Value="remove"  class="btn btn-danger navbar-btn" >remove Picture</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'addroompic')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Add room pic</title>
+</head>
+<body>
+
+
+<form action="/submitpic" method="post" enctype="multipart/form-data">
+    <table>
+
+        <tr><td> Picture to upload </td>
+            <td><input type="file"  name="file"/> </td>
+        </tr>
+        <tr>
+            <td>PicName</td><td><input type="text" name="name" /></td>
+            <td>RoomNO</td><td><input type="text" name="rid" /></td>
+        </tr>
+        <tr>
+        </br>
+            <td></td><td><button th:text="Upload" type="submit" Value="Upload" class="btn btn-primary navbar-btn" /> </td>
+        </tr>
+    </table>
+
+
+</form>
+</body>
+</html>
